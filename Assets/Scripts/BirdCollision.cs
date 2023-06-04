@@ -7,7 +7,7 @@ public class BirdCollision : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Pipe")
+        if (collision.tag == "Death")
         {
             // We end the session if we collided with a Pipe tag
             HandleDeath();
