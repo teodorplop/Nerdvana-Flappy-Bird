@@ -9,7 +9,7 @@ public class BirdCollision : MonoBehaviour
     {
         if (collision.tag == "Death")
         {
-            // We end the session if we collided with a Pipe tag
+            // We end the session if we collided with a Death tag
             HandleDeath();
         }
     }

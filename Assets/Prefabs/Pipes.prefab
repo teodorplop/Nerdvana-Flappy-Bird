@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 3398729681365002724}
   m_Layer: 0
   m_Name: Lower
-  m_TagString: Pipe
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 5243167482554991810}
   m_Layer: 0
   m_Name: Upper
-  m_TagString: Pipe
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
