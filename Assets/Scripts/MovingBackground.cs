@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// Component responsible for moving the texture towards the left
+/// Component responsible for moving the object towards the left
 /// </summary>
 public class MovingBackground : MonoBehaviour
 {
@@ -11,28 +11,22 @@ public class MovingBackground : MonoBehaviour
     public float speed;
 
     /// <summary>
-    /// Reference to the sprite renderer component
+    /// 
     /// </summary>
-    SpriteRenderer spriteRenderer;
+    public float leftLimit;
+
+    private float size;
 
     void Start()
     {
-        // Fetch the SpriteRenderer component from this GameObject
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        // Fetch the size of the renderer
+        size = GetComponent<SpriteRenderer>().size.x;
     }
 
     void Update()
     {
-        // Get the current offset of the texture
-        var offset = spriteRenderer.material.mainTextureOffset;
-        
-        // Move it
-        offset.x += Time.deltaTime * speed;
-
-        // Clamp [0, 1]
-        offset.x %= 1.0f;
-
-        // Set it back on the sprite renderer
-        spriteRenderer.material.mainTextureOffset = offset;
+        transform.position += new Vector3(1, 0, 0) * Time.deltaTime * speed;
+        if (transform.position.x < leftLimit)
+            transform.position += new Vector3(2 * size, 0, 0);
     }
 }
