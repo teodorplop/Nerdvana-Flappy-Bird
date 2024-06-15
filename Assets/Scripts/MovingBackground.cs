@@ -6,15 +6,18 @@ using UnityEngine;
 public class MovingBackground : MonoBehaviour
 {
     /// <summary>
-    /// How fast should the texture move
+    /// How fast should the object move
     /// </summary>
     public float speed;
 
     /// <summary>
-    /// 
+    /// When this horizontal limit is reached, the object is moved to the right
     /// </summary>
     public float leftLimit;
 
+    /// <summary>
+    /// Object horizontal dimension
+    /// </summary>
     private float size;
 
     void Start()
